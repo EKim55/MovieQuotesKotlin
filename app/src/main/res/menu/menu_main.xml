@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="edu.rosehulman.kime2.moviequotes.MainActivity">
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+
+    <item android:id="@+id/action_clear_quote"
+          android:title="@string/clear_quote"
+          android:icon="@drawable/ic_clear"
+          android:orderInCategory="150"
+          app:showAsAction="ifRoom"/>
+
+    <!--<item android:id="@+id/action_confirm_clear"-->
+          <!--android:title="Confirm Delete"-->
+          <!--android:-->
+          <!--android:icon="@drawable/ic_clear"-->
+          <!--android:orderInCategory="150"-->
+          <!--app:showAsAction="ifRoom"/>-->
+
+    <item android:id="@+id/action_increase_font_size"
+          android:title="@string/increase_font_size"
+          android:icon="@android:drawable/arrow_up_float"
+          android:orderInCategory="100"
+          app:showAsAction="ifRoom"/>
+</menu>

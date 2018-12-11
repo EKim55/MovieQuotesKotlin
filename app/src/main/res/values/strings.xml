@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MovieQuotes</string>
+    <string name="action_settings">Settings</string>
+    <string name="quote">Quote</string>
+    <string name="movie">Movie</string>
+    <string name="add_dialog_title">Add a quote</string>
+    <string name="enter_a_quote">Enter a quote</string>
+    <string name="enter_a_movie">Enter a movie</string>
+    <string name="increase_font_size">Increase font size</string>
+    <string name="clear_quote">Clear Quote</string>
+    <string name="which_settings_title">Which settings do you want?</string>
+    <string-array name="settings_options">
+        <item>Sound</item>
+        <item>Search</item>
+        <item>General</item>
+    </string-array>
+</resources>
