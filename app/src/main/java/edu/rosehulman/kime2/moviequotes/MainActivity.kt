@@ -1,21 +1,16 @@
 package edu.rosehulman.kime2.moviequotes
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.add_dialog.*
-import kotlinx.android.synthetic.main.add_dialog.view.*
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -35,28 +30,13 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             Log.d(Constants.TAG, "Pressed the floating action button.")
 //            updateQuote(MovieQuote("I am your father", "The Empire Strikes Back"))
-            showAddDialog()
+            adapter.showAddEditDialog()
         }
     }
 
     private fun updateQuote(movieQuote: MovieQuote) {
 //        quote_text_view.text = movieQuote.quote
 //        movie_text_view.text = movieQuote.movie
-    }
-
-    private fun showAddDialog() {
-        var builder = AlertDialog.Builder(this)
-        // Configure it. Title. Buttons (pos/neg/neutral). Icon. Message or Custom View or List.
-        builder.setTitle(R.string.add_dialog_title)
-        val view = LayoutInflater.from(this).inflate(R.layout.add_dialog, null, false)
-        builder.setView(view)
-        builder.setPositiveButton(android.R.string.ok, { _, _ ->
-            val quote = view.add_dialog_quote_edit_text.text.toString()
-            val movie = view.add_dialog_movie_edit_text.text.toString()
-            updateQuote(MovieQuote(quote, movie))
-        })
-        builder.setNegativeButton(android.R.string.cancel, null)
-        builder.create().show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
