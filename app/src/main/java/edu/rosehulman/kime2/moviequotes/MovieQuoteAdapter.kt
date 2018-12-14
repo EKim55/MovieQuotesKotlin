@@ -58,4 +58,9 @@ class MovieQuoteAdapter(var context: Context): RecyclerView.Adapter<MovieQuoteVi
         builder.setNegativeButton(android.R.string.cancel, null)
         builder.create().show()
     }
+
+    fun selectMovieQuote(position: Int) {
+        movieQuotes[position].showDark = !movieQuotes[position].showDark
+        notifyItemChanged(position)
+    }
 }
